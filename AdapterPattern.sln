@@ -1,0 +1,39 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdapterPattern.Domain", "AdapterPattern.Domain\AdapterPattern.Domain.csproj", "{E0CEBD76-A63D-47E8-9E38-CAE750B864F1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{2D3F68A2-32B1-4AFB-8718-AEBBC4BDC1E0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infra", "Infra", "{B1854F23-0ECB-4B6F-A9D7-7DA4246A2B42}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{1FCEC3C9-3F07-4633-B4D4-CC9D5DDF0915}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdapterPattern.Infra.Data", "AdapterPattern.Infra.Data\AdapterPattern.Infra.Data.csproj", "{59857888-46A7-40E7-8882-D99A9E9DD070}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E0CEBD76-A63D-47E8-9E38-CAE750B864F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E0CEBD76-A63D-47E8-9E38-CAE750B864F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E0CEBD76-A63D-47E8-9E38-CAE750B864F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E0CEBD76-A63D-47E8-9E38-CAE750B864F1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{59857888-46A7-40E7-8882-D99A9E9DD070}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{59857888-46A7-40E7-8882-D99A9E9DD070}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{59857888-46A7-40E7-8882-D99A9E9DD070}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{59857888-46A7-40E7-8882-D99A9E9DD070}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{E0CEBD76-A63D-47E8-9E38-CAE750B864F1} = {2D3F68A2-32B1-4AFB-8718-AEBBC4BDC1E0}
+		{1FCEC3C9-3F07-4633-B4D4-CC9D5DDF0915} = {B1854F23-0ECB-4B6F-A9D7-7DA4246A2B42}
+		{59857888-46A7-40E7-8882-D99A9E9DD070} = {1FCEC3C9-3F07-4633-B4D4-CC9D5DDF0915}
+	EndGlobalSection
+EndGlobal
