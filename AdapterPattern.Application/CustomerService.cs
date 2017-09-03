@@ -1,28 +1,31 @@
-﻿using AdapterPattern.Domain.Entities;
+﻿using AdapterPattern.Application.Interfaces;
+using AdapterPattern.Domain.Entities;
 using AdapterPattern.Domain.Interfaces.Repositories;
 using System.Collections.Generic;
-using System.Web;
 
 namespace AdapterPattern.Application
 {
     public class CustomerService
     {
         private readonly ICustomerRepository _customerRepository;
+        private readonly ICacheStorage _cacheStorage;
 
-        public CustomerService(ICustomerRepository customerRepository)
+        public CustomerService(ICustomerRepository customerRepository,
+                               ICacheStorage cacheStorage)
         {
             _customerRepository = customerRepository;
+            _cacheStorage = cacheStorage;
         }
 
         public IList<Customer> GetAllCustomers()
         {
             IList<Customer> customers;
             string storageKey = "GetAllCustomers";
-            customers = (List<Customer>) HttpContext.Current.Cache.Get(storageKey);
+            customers = _cacheStorage.Retrieve<List<Customer>>(storageKey);
             if (customers == null)
             {
                 customers = _customerRepository.GetCustomers();
-                HttpContext.Current.Cache.Insert(storageKey, customers);
+                _cacheStorage.Store(storageKey, customers);
             }
 
             return customers;
